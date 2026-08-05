@@ -1,0 +1,226 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+body {
+  font-family: 'Bebas Neue', cursive;
+  background-color: #f8f9fa;
+  padding-left: 0;
+  padding-right: 120px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+/* Hero Section */
+.bg-light {
+  background-color: transparent !important;
+  color: #222 !important;
+  background-image: url('../img/B');
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Anime Card */
+.anime-card {
+  transition: transform 0.2s;
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+}
+
+.star {
+  color: gold;
+}
+
+footer {
+  background-color: #343a40;
+  color: rgb(17, 17, 17);
+  padding: 10px 0;
+}
+
+/* Dark Mode */
+.dark-mode .modal-content {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.dark-mode .modal-header,
+.dark-mode .modal-body {
+  color: white;
+}
+
+.dark-mode .modal-header .btn-close {
+  filter: invert(1);
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.card.dark-mode {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.card.dark-mode .card-title,
+.card.dark-mode .card-text {
+  color: white !important;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode h1,
+.dark-mode h5,
+.dark-mode p,
+.dark-mode label {
+  color: white !important;
+}
+
+.dark-mode .bg-light {
+  background-color: #1f1f1f !important;
+}
+
+.dark-mode .form-control {
+  background-color: #333 !important;
+  color: white !important;
+  border: 1px solid #4e5156;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #ccc;
+}
+
+.dark-mode footer {
+  background-color: #1f1f1f !important;
+  color: white;
+}
+
+/* Toggle Dark Mode */
+.toggle-wrapper {
+  width: 70px;
+  height: 36px;
+  border-radius: 50px;
+  background-color: #ccc;
+  padding: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  display: inline-block;
+}
+
+.toggle-inner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-inner img {
+  width: 18px;
+  height: 18px;
+  transition: opacity 0.3s ease;
+}
+
+body.dark-mode .toggle-wrapper {
+  background-color: #4b4b4b;
+}
+
+body.dark-mode .toggle-inner {
+  background-color: #929191;
+  transform: translateX(32px);
+}
+
+body.dark-mode .toggle-inner img {
+  filter: invert(0.6);
+}
+
+/* Iklan */
+#sideAd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100vh;
+  background: rgba(255,255,255,0.95);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+}
+
+#sideAd.right-ad {
+  left: auto;
+  right: 0;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+}
+
+body.dark-mode #sideAd {
+  background: rgba(31,31,31,0.95);
+}
+
+body.dark-mode #sideAd.right-ad {
+  box-shadow: -2px 0 8px rgba(255,255,255,0.08);
+}
+
+@media (max-width: 991px) {
+  #sideAd {
+    display: none;
+  }
+  body {
+    padding-right: 0;
+  }
+}
+
+#ad-stack, .ad-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 10px;
+}
+#ad-stack img, .ad-stack img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.scroll-anime {
+  overflow-x: auto !important;
+  flex-wrap: nowrap !important;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #e3e3e3;
+}
+
+.scroll-anime::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-anime::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.scroll-anime::-webkit-scrollbar-track {
+  background: #e3e3e3;
+  border-radius: 4px;
+}
+
